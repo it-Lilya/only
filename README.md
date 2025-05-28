@@ -4,7 +4,7 @@
 
 ### 1. Клонирование репозитория
 ```bash
-https://github.com/it-Lilya/blog_platform.git
+https://github.com/it-Lilya/only.git
 ```
 
 ### 2. Переход в директорию проекта
