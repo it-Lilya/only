@@ -1,0 +1,103 @@
+@import '../../../shared/styles/lib/mixins.scss';
+@import '../../../shared/styles/lib/breakpoints.scss';
+
+.spinner {
+  --angle: 0deg;
+  --time: 300ms;
+  --delay: 300ms;
+
+  &__main-circle {
+    position: relative;
+    width: 530px;
+    height: 530px;
+    border: 1px solid $spinner-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(var(--angle));
+    transition: all var(--time) ease-in-out 0s;
+    z-index: 2;
+
+    &:hover {
+      position: relative;
+    }
+  }
+
+  &__circle-area {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+
+    &:hover .spinner__circle {
+      position: relative;
+      background-color: $bg-color;
+      scale: 1;
+    }
+  }
+
+  &__circle {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $font-main-color;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    transform: rotate(calc(-360deg / var(--count) * var(--i) - var(--angle)));
+    border: 1px solid $circle-color;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $font-main-color;
+    visibility: visible;
+    scale: 0.1;
+    transition: all 300ms ease-in-out;
+  }
+
+  &__title {
+    position: absolute;
+    left: 76px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms linear var(--delay);
+  }
+
+  &__shoulder {
+    width: calc(100% + 56px);
+    transform-origin: center;
+    position: absolute;
+    transform: rotate(calc(360deg / var(--count) * var(--i)));
+    visibility: hidden;
+
+    &_active {
+      & .spinner__title {
+        opacity: 1;
+        visibility: visible;
+        cursor: default;
+      }
+
+      & .spinner__circle {
+        width: 56px;
+        height: 56px;
+        background-color: $bg-color;
+        scale: 1;
+        cursor: default;
+      }
+    }
+  }
+
+  @media (max-width: $bp-tablet) {
+    display: none;
+  }
+}

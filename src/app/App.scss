@@ -1,0 +1,6 @@
+@import '../shared/styles/lib/mixins';
+
+.app {
+	background-color: $bg-color;
+	user-select: none;
+}
