@@ -23,8 +23,12 @@ const Slider: React.FC<SliderProps> = ({ dates, currentEvent, sliderRef }) => {
             slidesPerView: 1.5,
             spaceBetween: 25
           },
-          834: {
+          600: {
             slidesPerView: 2,
+            spaceBetween: 40
+          },
+          834: {
+            slidesPerView: 3,
             spaceBetween: 80
           },
           1025: {
