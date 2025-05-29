@@ -1,0 +1,36 @@
+@import '../../../../shared/styles/lib/breakpoints.scss';
+@import '../../../../shared/styles/lib/mixins.scss';
+
+.events {
+  &__control-buttons {
+    order: 3;
+  border: 1px solid green;
+
+    @media (max-width: $bp-tablet) {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__button {
+    padding: 0;
+    background-color: $font-main-color;
+    border: none;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.4;
+    margin-bottom: 18.67px;
+
+    &_active {
+      opacity: 1;
+    }
+  }
+}

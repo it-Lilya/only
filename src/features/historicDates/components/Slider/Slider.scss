@@ -1,15 +1,16 @@
-@import '../../../shared/styles/lib/breakpoints.scss';
-@import '../../../shared/styles/lib/mixins.scss';
+@import '../../../../shared/styles/lib/breakpoints.scss';
+@import '../../../../shared/styles/lib/mixins.scss';
 
 .slider {
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 
   @media (max-width: $bp-tablet) {
     padding-left: 20px;
     padding-right: 20px;
+    height: 150px;
   }
 
   @media (min-width: $bp-tablet) {
@@ -21,9 +22,7 @@
     opacity: 1;
 
     @media (max-width: $bp-tablet) {
-      animation: slideToUp 300ms ease-in-out;
-      transition: transform 300ms ease-in-out;
-      transform: translateY(-10px);
+      transition: all 200ms ease-in-out;
     }
   }
 
@@ -62,7 +61,7 @@
     line-height: 150%;
     color: $font-main-color;
 
-    @media (max-width: $bp-mobile) {
+    @media (max-width: $bp-tablet) {
       font-size: 14px;
       line-height: 145%;
     }
@@ -89,11 +88,13 @@
     }
 
     &_prev {
+      margin-top: 25px;
       left: 20px;
       transform: rotate(135deg);
     }
 
     &_next {
+      margin-top: 25px;
       right: 20px;
       transform: rotate(-45deg);
     }

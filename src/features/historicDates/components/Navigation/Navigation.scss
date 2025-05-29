@@ -1,8 +1,5 @@
-@import '../../../shared/styles/lib/breakpoints.scss';
-@import '../../../shared/styles/lib/mixins.scss';
-
-@import "../../../shared/styles/lib/breakpoints.scss";
-@import "../../../shared/styles/lib/mixins.scss";
+@import '../../../../shared/styles/lib/breakpoints.scss';
+@import '../../../../shared/styles/lib/mixins.scss';
 
 .navigation {
   width: 100%;
@@ -20,11 +17,12 @@
     }
   }
 
-  @media (max-width: $bp-mobile) {
+  @media (max-width: $bp-tablet) {
     max-width: 58.33px;
   }
 }
-.control-buttons {
+
+.control {
   display: flex;
   justify-content: space-between;
 
@@ -53,7 +51,7 @@
       width: 8px;
       height: 8px;
 
-      @media (max-width: $bp-mobile) {
+      @media (max-width: $bp-tablet) {
         border-width: 0 2px 2px 0;
         width: 5px;
         height: 5px;
@@ -69,7 +67,7 @@
       }
     }
 
-    @media (max-width: $bp-mobile) {
+    @media (max-width: $bp-tablet) {
       height: 25px;
       width: 25px;
       padding: 0 1px 1px 0;
