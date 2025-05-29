@@ -4,7 +4,6 @@
 .events {
   &__control-buttons {
     order: 3;
-  border: 1px solid green;
 
     @media (max-width: $bp-tablet) {
       display: flex;
